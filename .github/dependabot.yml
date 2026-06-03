@@ -1,9 +1,12 @@
+---
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
+  - package-ecosystem: github-actions
+    directory: /
+    cooldown:
+      default-days: 7
     labels:
-      - "kind/dependencies"
-      - "bot"
+      - kind/dependencies
+      - bot
+    schedule:
+      interval: daily
